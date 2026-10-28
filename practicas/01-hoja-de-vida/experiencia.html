@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiencia</title>
+    <title>Experiencia | Jefferson Palma</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
+    <header class="encabezado">
+        <img class="perfil" src="assets/IMG_9603.jpeg" alt="Foto de Jefferson Palma">
+        <div class="datos-personales">
+            <h1>Jefferson Palma</h1>
+            <p>Desarrollador Full Stack.</p>
+        </div>
+    </header>
+
+    <nav class="menu">
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="estudios.html">Estudios</a></li>
-            <li><a href="experiencia.html">Experiencia</a></li>
+            <li><a href="experiencia.html" class="activo">Experiencia</a></li>
             <li><a href="cursos.html">Cursos</a></li>
             <li><a href="habilidades.html">Habilidades</a></li>
             <li><a href="referencias.html">Referencias</a></li>
@@ -19,36 +27,39 @@
         </ul>
     </nav>
 
-    <h1>Experiencia laboral</h1>
+    <main class="contenido">
+        <h2>Experiencia laboral</h2>
+        <section class="tarjeta">
+            <h3>Especialista de Desarrollo — Xtrim</h3>
+            <p><em>Enero 2025 – Actualidad</em><br>
+                Desarrollo de microservicios en Python para flujos de venta digital y gestión de contratos.</p>
+        </section>
+        <section class="tarjeta">
+            <h3>Ingeniero de Desarrollo — Apptelink SA</h3>
+            <p><em>Mayo 2023 – Enero 2025</em><br>
+                Sistema de scoring crediticio y aplicación en React Native para trazabilidad de vuelos.</p>
+        </section>
 
-    <ul>
-        <li>
-            <strong>Especialista de Desarrollo — Xtrim</strong> (Enero 2025 – Actualidad) <br>
-            Desarrollo de microservicios en Python para flujos de venta digital y gestión de contratos.
-        </li>
-        <li>
-            <strong>Ingeniero de Desarrollo — Apptelink SA</strong> (Mayo 2023 – Enero 2025) <br>
-            Sistema de scoring crediticio y aplicación en React Native para trazabilidad de vuelos.
-        </li>
-    </ul>
-
-    <h2>Proyectos destacados</h2>
-    <table border="1">
-        <tr>
-            <th>Proyecto</th>
-            <th>Descripción</th>
-            <th>Tecnologías</th>
-        </tr>
-        <tr>
-            <td>Proyecto de gestión Financiera</td>
-            <td>Desarrollo de una aplicación web para gestión de finanzas personales.</td>
-            <td>React, Node.js, PostgreSQL</td>
-        </tr>
-        <tr>
-            <td>Proyecto de e-commerce</td>
-            <td>Creación de una plataforma de comercio electrónico.</td>
-            <td>Angular, Express, PostgreSQL</td>
-        </tr>
-    </table>
+        <h2>Proyectos destacados</h2>
+        <section class="tarjeta">
+            <table>
+                <tr>
+                    <th>Proyecto</th>
+                    <th>Descripción</th>
+                    <th>Tecnologías</th>
+                </tr>
+                <tr>
+                    <td>Proyecto de gestión Financiera</td>
+                    <td>Desarrollo de una aplicación web para gestión de finanzas personales.</td>
+                    <td>React, Node.js, PostgreSQL</td>
+                </tr>
+                <tr>
+                    <td>Proyecto de e-commerce</td>
+                    <td>Creación de una plataforma de comercio electrónico.</td>
+                    <td>Angular, Express, PostgreSQL</td>
+                </tr>
+            </table>
+        </section>
+    </main>
 </body>
 </html>

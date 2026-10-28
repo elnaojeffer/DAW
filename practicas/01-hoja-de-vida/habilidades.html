@@ -3,36 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habilidades</title>
+    <title>Habilidades | Jefferson Palma</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
+    <header class="encabezado">
+        <img class="perfil" src="assets/IMG_9603.jpeg" alt="Foto de Jefferson Palma">
+        <div class="datos-personales">
+            <h1>Jefferson Palma</h1>
+            <p>Desarrollador Full Stack.</p>
+        </div>
+    </header>
+
+    <nav class="menu">
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="estudios.html">Estudios</a></li>
             <li><a href="experiencia.html">Experiencia</a></li>
             <li><a href="cursos.html">Cursos</a></li>
-            <li><a href="habilidades.html">Habilidades</a></li>
+            <li><a href="habilidades.html" class="activo">Habilidades</a></li>
             <li><a href="referencias.html">Referencias</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
-    <h1>Habilidades Técnicas</h1>
-    <p><strong>Lenguajes:</strong> TypeScript, Python, C#, JavaScript, SQL</p>
-    <p><strong>Frameworks:</strong> Flask, FastAPI, .NET Core, Node.js, Angular, React, React Native</p>
-    <p><strong>Herramientas:</strong> Git, Jenkins, Jira, Swagger/OpenAPI, Jest, Playwright</p>
-    <p><strong>Infraestructura:</strong> Docker, Kubernetes, PostgreSQL, MySQL, MongoDB, Redis</p>
+    <main class="contenido">
+        <h2>Habilidades técnicas</h2>
+        <section class="tarjeta">
+            <p><strong>Lenguajes:</strong> TypeScript, Python, C#, JavaScript, SQL</p>
+            <p><strong>Frameworks:</strong> Flask, FastAPI, .NET Core, Node.js, Angular, React, React Native</p>
+            <p><strong>Herramientas:</strong> Git, Jenkins, Jira, Swagger/OpenAPI, Jest, Playwright</p>
+            <p><strong>Infraestructura:</strong> Docker, Kubernetes, PostgreSQL, MySQL, MongoDB, Redis</p>
+        </section>
 
-    <h2>Habilidades blandas</h2>
-    <ul>
-        <li>Comunicación efectiva</li>
-        <li>Toma de decisiones</li>
-        <li>Gestión de riesgos</li>
-        <li>Proactividad</li>
-        <li>Pensamiento analítico</li>
-        <li>Mejora continua de procesos</li>
-    </ul>
+        <h2>Habilidades blandas</h2>
+        <section class="tarjeta">
+            <ul>
+                <li>Comunicación efectiva</li>
+                <li>Toma de decisiones</li>
+                <li>Gestión de riesgos</li>
+                <li>Proactividad</li>
+                <li>Pensamiento analítico</li>
+                <li>Mejora continua de procesos</li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>

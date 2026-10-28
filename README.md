@@ -31,8 +31,3 @@ GitHub Pages solo sirve archivos estáticos (HTML, CSS, JS): **no ejecuta PHP**.
 - En la portada, enlaza la tarjeta al código en GitHub en lugar de a la página.
 - Si necesitas que se vean en línea, usa un hosting con PHP (InfinityFree, 000webhost, Render, etc.).
 
-## Publicar en GitHub Pages
-
-1. Sube el repo a GitHub.
-2. Settings → Pages → Source: *Deploy from a branch* → `main` / `(root)`.
-3. Quedará en `https://USUARIO.github.io/REPO/`.
