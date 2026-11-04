@@ -1,4 +1,4 @@
-/*estilos generales*/
+/* Estilos generales */
 * {
     box-sizing: border-box;
 }
@@ -11,7 +11,7 @@ body {
     padding: 20px;
 }
 
-/*estilos del encabezado*/
+/* Encabezado */
 .encabezado {
     display: flex;
     align-items: center;
@@ -19,13 +19,13 @@ body {
     gap: 30px;
     background-color: #164b80;
     border-radius: 10px;
-    padding: 20px;
+    padding: 25px 20px;
 }
 
-/*Imagen de perfil*/
+/* Imagen de perfil */
 .perfil {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid white;
@@ -38,14 +38,14 @@ body {
 }
 
 .datos-personales h1 {
-    font-size: 24px;
+    font-size: 28px;
     margin: 0;
     color: white;
 }
 
 .datos-personales p {
     font-size: 16px;
-    margin: 10px 0 0 0;
+    margin: 10px 0 0;
     color: #dce9f8;
 }
 
@@ -61,16 +61,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px 40px;
+    gap: 10px 32px;
     margin: 0;
-    padding: 20px;
+    padding: 18px 20px;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .menu a:hover,
@@ -81,40 +81,56 @@ body {
 /* Contenido */
 .contenido {
     max-width: 900px;
-    margin: 0 auto;
-}
-
-.contenido_contacto {
-    max-width: 90%  ;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.contact_data {
-    flex: 1;
-}
-
-.form_contact {
-    flex: 1;
+    margin: 30px auto 0;
 }
 
 h2 {
     text-align: center;
     color: #164b80;
     font-size: 26px;
-    margin: 30px 0 20px;
+    margin: 0 0 20px;
+}
+
+.contenido > h2 {
+    margin-top: 10px;
+}
+
+h3,
+h4 {
+    color: #164b80;
+    margin: 0 0 10px;
 }
 
 h3 {
-    color: #164b80;
-    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+.tarjeta h3 {
+    margin-top: 20px;
+}
+
+.tarjeta > h3:first-child {
+    margin-top: 0;
+}
+
+.subtitulo {
+    font-size: 21px;
+    border-bottom: 2px solid #9fc6ef;
+    padding-bottom: 6px;
+    margin: 30px 0 15px;
 }
 
 p,
 li {
     line-height: 1.6;
+}
+
+p {
+    margin: 0 0 10px;
 }
 
 a {
@@ -135,6 +151,61 @@ a {
     padding-left: 20px;
 }
 
+/* Proyectos */
+.tecnologias {
+    color: #5a6b7d;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.enlaces {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.enlaces a {
+    font-weight: bold;
+}
+
+.nota {
+    margin-top: 15px;
+    color: #5a6b7d;
+    font-style: italic;
+}
+
+/* Lista de definiciones (habilidades) */
+dl {
+    margin: 0;
+}
+
+dt {
+    font-weight: bold;
+    color: #164b80;
+}
+
+dd {
+    margin: 0 0 12px;
+    line-height: 1.6;
+}
+
+/* Etiquetas de herramientas */
+.tarjeta .etiquetas {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+}
+
+.etiquetas li {
+    background-color: #e3eef9;
+    color: #164b80;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 15px;
+}
+
 /* Tabla */
 table {
     width: 100%;
@@ -153,16 +224,23 @@ td {
     border-bottom: 1px solid #dde3ea;
 }
 
-tr:nth-child(even) td {
+tbody tr:nth-child(even) td {
     background-color: #f0f4f8;
 }
 
-/* Formulario de contacto */
-.formulario {
-    max-width: 520px;
-    margin: 0 auto 20px;
+/* Contacto */
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
 }
 
+address {
+    font-style: normal;
+}
+
+/* Formulario de contacto */
 .formulario label {
     display: block;
     font-weight: bold;
@@ -202,10 +280,40 @@ tr:nth-child(even) td {
     background-color: #1f62a5;
 }
 
+/* Pie de pagina */
+.pie {
+    text-align: center;
+    color: #5a6b7d;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+    body {
+        padding: 12px;
+    }
+
     .encabezado {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .menu ul {
+        gap: 8px 20px;
+    }
+
+    .tarjeta {
+        padding: 20px;
+    }
+
+    .contacto {
+        grid-template-columns: 1fr;
+    }
+
+    th,
+    td {
+        padding: 8px 6px;
+        font-size: 14px;
     }
 }

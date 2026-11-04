@@ -8,10 +8,10 @@
 </head>
 <body>
     <header class="encabezado">
-        <img class="perfil" src="assets/IMG_9603.jpeg" alt="Foto de Jefferson Palma">
+        <img class="perfil" src="assets/foto-perfil.jpg" alt="Foto de Jefferson Palma" width="120" height="120">
         <div class="datos-personales">
-            <h1>Jefferson Palma</h1>
-            <p>Desarrollador Full Stack.</p>
+            <h1>Jefferson Palma Coloma</h1>
+            <p>Desarrollador Full Stack · Estudiante de Ingeniería en Software</p>
         </div>
     </header>
 
@@ -20,6 +20,7 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="estudios.html">Estudios</a></li>
             <li><a href="experiencia.html" class="activo">Experiencia</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
             <li><a href="cursos.html">Cursos</a></li>
             <li><a href="habilidades.html">Habilidades</a></li>
             <li><a href="referencias.html">Referencias</a></li>
@@ -29,37 +30,36 @@
 
     <main class="contenido">
         <h2>Experiencia laboral</h2>
-        <section class="tarjeta">
-            <h3>Especialista de Desarrollo — Xtrim</h3>
-            <p><em>Enero 2025 – Actualidad</em><br>
-                Desarrollo de microservicios en Python para flujos de venta digital y gestión de contratos.</p>
-        </section>
-        <section class="tarjeta">
-            <h3>Ingeniero de Desarrollo — Apptelink SA</h3>
-            <p><em>Mayo 2023 – Enero 2025</em><br>
-                Sistema de scoring crediticio y aplicación en React Native para trazabilidad de vuelos.</p>
-        </section>
 
-        <h2>Proyectos destacados</h2>
-        <section class="tarjeta">
-            <table>
-                <tr>
-                    <th>Proyecto</th>
-                    <th>Descripción</th>
-                    <th>Tecnologías</th>
-                </tr>
-                <tr>
-                    <td>Proyecto de gestión Financiera</td>
-                    <td>Desarrollo de una aplicación web para gestión de finanzas personales.</td>
-                    <td>React, Node.js, PostgreSQL</td>
-                </tr>
-                <tr>
-                    <td>Proyecto de e-commerce</td>
-                    <td>Creación de una plataforma de comercio electrónico.</td>
-                    <td>Angular, Express, PostgreSQL</td>
-                </tr>
-            </table>
-        </section>
+        <article class="tarjeta">
+            <h3>Especialista de Desarrollo — Xtrim</h3>
+            <p><em>Enero 2025 – Actualidad</em></p>
+            <ul>
+                <li>Desarrollo de microservicios en Python (FastAPI/Flask) para flujos de venta digital, validación de
+                    clientes y gestión de contratos.</li>
+                <li>Implementación y documentación de APIs REST con Swagger/OpenAPI para procesos de checkout y
+                    activación de servicios.</li>
+                <li>Integración de servicios backend con sistemas de facturación, CRM y catálogos de productos.</li>
+                <li>Análisis de procesos de negocio y levantamiento de requerimientos.</li>
+                <li>Mejoras en procesos de cobranza (dunning), automatización operativa y pipelines CI/CD.</li>
+            </ul>
+        </article>
+
+        <article class="tarjeta">
+            <h3>Ingeniero de Desarrollo — Apptelink SA</h3>
+            <p><em>Mayo 2023 – Enero 2025</em></p>
+            <ul>
+                <li>Sistema de scoring y control crediticio integrado con Equifax.</li>
+                <li>Aplicación móvil en React Native para trazabilidad de vuelos privados.</li>
+                <li>Sistema de bitácora y seguimiento de tareas con React.</li>
+                <li>Sistemas con Python e IA para medición de paquetes y detección de somnolencia.</li>
+                <li>Integraciones con servicios aduaneros y logísticos.</li>
+            </ul>
+        </article>
     </main>
+
+    <footer class="pie">
+        <p>© 2026 Jefferson Palma Coloma · <a href="contacto.html">Contacto</a></p>
+    </footer>
 </body>
 </html>
