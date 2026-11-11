@@ -206,6 +206,70 @@ dd {
     font-size: 15px;
 }
 
+/* Listas: viñetas con el color del tema */
+.tarjeta ul li::marker {
+    color: #164b80;
+}
+
+.tarjeta li {
+    margin-bottom: 6px;
+}
+
+/* Lista con check (objetivos, habilidades blandas) */
+.lista-check {
+    list-style: none;
+}
+
+.tarjeta .lista-check {
+    padding-left: 0;
+}
+
+.lista-check li {
+    position: relative;
+    padding-left: 28px;
+}
+
+.lista-check li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2e8b57;
+    font-weight: bold;
+}
+
+/* Lista en dos columnas */
+.lista-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 30px;
+}
+
+.lista-columnas li {
+    margin-bottom: 0;
+}
+
+/* Linea de tiempo (funciones en experiencia) */
+article.tarjeta ul {
+    list-style: none;
+    border-left: 3px solid #9fc6ef;
+    padding-left: 20px;
+}
+
+article.tarjeta li {
+    position: relative;
+}
+
+article.tarjeta li::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 9px;
+    width: 11px;
+    height: 11px;
+    background-color: #164b80;
+    border-radius: 50%;
+}
+
 /* Tabla */
 table {
     width: 100%;
@@ -307,7 +371,8 @@ address {
         padding: 20px;
     }
 
-    .contacto {
+    .contacto,
+    .lista-columnas {
         grid-template-columns: 1fr;
     }
 
