@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Jefferson Palma</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <img class="perfil" src="assets/foto-perfil.jpg" alt="Foto de Jefferson Palma" width="120" height="120">
+        <div class="datos-personales">
+            <h1>Jefferson Palma Coloma</h1>
+            <p>Desarrollador Full Stack · Estudiante de Ingeniería en Software</p>
+        </div>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="estudios.html">Estudios</a></li>
+            <li><a href="experiencia.html">Experiencia</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="habilidades.html">Habilidades</a></li>
+            <li><a href="referencias.html">Referencias</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="registro.html" class="activo">Registro</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenido registro">
+        <section class="tarjeta">
+            <h2>Crear cuenta</h2>
+            <form class="formulario" id="miFormulario" action="#" method="post" novalidate>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" minlength="3" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" autocomplete="new-password" minlength="8" required>
+                <p class="ayuda">Mínimo 8 caracteres.</p>
+
+                <label for="confirmacion">Confirmar contraseña:</label>
+                <input type="password" id="confirmacion" name="confirmacion" autocomplete="new-password" minlength="8" required>
+
+                <div class="condiciones">
+                    <input type="checkbox" id="condiciones" name="condiciones" required>
+                    <label for="condiciones">Acepto los <a href="#" data-bs-toggle="modal" data-bs-target="#modalTerminos">términos y condiciones</a> de uso</label>
+                </div>
+
+                <div id="mensaje"></div>
+
+                <button type="submit">Registrarse</button>
+                <button type="button" class="boton-limpiar" onclick="limpiarFormulario()">Limpiar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Jefferson Palma Coloma · <a href="contacto.html">Contacto</a></p>
+    </footer>
+
+    <!-- Modal de Términos y condiciones -->
+    <div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTerminosLabel">Términos y condiciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Al registrarte en este sitio aceptas las siguientes condiciones:</p>
+                    <ol>
+                        <li>Los datos que ingreses deben ser reales y estar actualizados.</li>
+                        <li>Tu información solo se usará para fines de contacto y no será compartida con terceros.</li>
+                        <li>Eres responsable de mantener tu contraseña en secreto.</li>
+                        <li>El uso indebido del sitio puede causar la eliminación de tu cuenta.</li>
+                    </ol>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btn-aceptar" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Funcion para actualziar estado check en el boton Aceptar del modal de terminos y condiciones
+        function actualizarEstadoCondiciones() {
+            document.getElementById('condiciones').checked = true;
+        }
+
+        // Agregar evento al botón Aceptar del modal
+        document.getElementById('btn-aceptar').addEventListener('click', actualizarEstadoCondiciones);
+
+        // Validación de contraseñas
+        document.getElementById('miFormulario').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombre').value.trim();
+            const correo = document.getElementById('correo').value.trim();
+            const contrasena = document.getElementById('contrasena').value;
+            const confirmacion = document.getElementById('confirmacion').value;
+            const terminos = document.getElementById('condiciones').checked;
+
+            const error =
+                    (nombre === '' || correo === '' || contrasena === '' || confirmacion === '') ? 'Por favor, completa todos los campos.'
+                    : (!correo.includes('@') || !correo.includes('.')) ? 'Ingresa un correo electrónico válido.'
+                    : (contrasena.length < 8) ? 'La contraseña debe tener al menos 8 caracteres.'
+                    : (contrasena !== confirmacion) ? 'Las contraseñas no coinciden.'
+                    : (!terminos) ? 'Por favor, acepta los términos y condiciones.'
+                    : '';
+
+                if (error !== '') {
+                    mostrarMensaje(error, 'danger');
+                    return;
+                }
+
+            // Si todas las validaciones pasan, muestra un mensaje de éxito
+            mostrarMensaje('Registro exitoso. ¡Gracias por registrarte!', 'success');
+            document.getElementById('miFormulario').reset();
+        });
+
+        function mostrarMensaje(mensaje, tipo) {
+            const mensajeDiv = document.getElementById('mensaje');
+            mensajeDiv.innerHTML = mensaje;
+            mensajeDiv.className = `alert alert-${tipo}`;
+        }
+
+        function limpiarFormulario() {
+            document.getElementById('miFormulario').reset();
+            const mensajeDiv = document.getElementById('mensaje');
+            mensajeDiv.innerHTML = '';
+            mensajeDiv.className = '';
+        }
+    </script>
+</body>
+</html>

@@ -344,6 +344,54 @@ address {
     background-color: #1f62a5;
 }
 
+/* Registro */
+.registro {
+    max-width: 480px;
+}
+
+.formulario .ayuda {
+    font-size: 13px;
+    color: #5a6b7d;
+    margin: -10px 0 15px;
+}
+
+.formulario .condiciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.formulario .condiciones input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    flex-shrink: 0;
+    accent-color: #164b80;
+}
+
+.formulario .condiciones label {
+    margin: 0;
+    font-weight: normal;
+    color: #263445;
+}
+
+.formulario input:focus {
+    outline: 2px solid #9fc6ef;
+    border-color: #164b80;
+}
+
+.formulario .boton-limpiar {
+    margin-top: 10px;
+    background-color: white;
+    color: #164b80;
+    border: 1px solid #164b80;
+}
+
+.formulario .boton-limpiar:hover {
+    background-color: #e3eef9;
+}
+
 /* Pie de pagina */
 .pie {
     text-align: center;
